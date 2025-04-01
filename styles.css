@@ -107,24 +107,108 @@ main {
 }
 
 /*Адаптивность*/
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
     .features {
+    .links-container {
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
     
     .feature {
         margin: 10px 0;
+    .link-item {
+        width: 80%;
+        margin: 0 auto 20px; /* Отступ снизу 20px */
+        padding: 10px;
+        box-sizing: border-box;
     }
     
     nav ul {
         float: none;
+    .link-image {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 10px;
+    }
+    
+    .button-container {
+        width: 80%;
+        margin: 20px auto 0; /* Отступ сверху 20px, как у ссылок */
+    }
+    
+    .button-container .btn {
+        width: 100%;
         text-align: center;
         padding: 0;
+        padding: 12px;
+        font-size: 16px;
+    }
+    
+    /* Опционально: уменьшаем размер шрифта для заголовков на мобильных */
+    .main-content h1 {
+        font-size: 28px;
+    }
+    
+    .main-content p {
+        font-size: 16px;
+        padding: 0 15px;
+    }
+}
+
+/* Адаптивность для страницы с описанием породы */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column; /* Располагаем элементы вертикально */
+        align-items: center; /* Центрируем по горизонтали */
+        gap: 20px; /* Отступ между элементами */
+        padding: 0 15px; /* Отступы по бокам */
+    }
+    
+    .image-container {
+        margin-right: 0; /* Убираем отступ справа */
+        width: 100%; /* Занимает всю ширину */
+        display: flex;
+        justify-content: center; /* Центрируем изображение */
+    }
+    
+    .image-container img {
+        width: 100%; /* Изображение занимает всю доступную ширину */
+        max-width: 400px; /* Но не более 400px */
+        height: auto;
+    }
+    
+    .text-container {
+        width: 100%; /* Занимает всю доступную ширину */
+        padding: 0 10px; /* Небольшие отступы по бокам */
+    }
+    
+    .button-container {
+        flex-direction: column; /* Кнопки друг под другом */
+        align-items: center; /* Центрируем кнопки */
+        gap: 10px; /* Отступ между кнопками */
+        width: 90%; /* Ширина контейнера кнопок */
+        margin: 20px auto; /* Отступ сверху и снизу */
+    }
+    
+    .button-container .btn {
+        width: 100%; /* Кнопки занимают всю ширину контейнера */
+    }
+    
+    /* Опциональные стили для лучшей читаемости */
+    .content h1 {
+        font-size: 28px;
+        padding: 0 15px;
     }
     
     nav ul li {
         display: block;
         margin: 10px 0;
+    .text-container p {
+        font-size: 16px;
+        line-height: 1.5;
     }
 }
 
